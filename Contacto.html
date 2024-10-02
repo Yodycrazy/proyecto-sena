@@ -43,37 +43,36 @@
           </div>
           <div class="Contenido">
             <center>
-            <h1>¿Necesitas contactarnos?</h1>
-            <h3>Llena este formulario y nos pondremos en contacto contigo.</h3>
-            <form class="Form_Contacto" id="Formulario">
-              <section id="Serv_Select">
-                <h1>Selecciona el servicio que necesitas</h1>
-                <input type="checkbox" id="Pag" name="Tipo_Serv" value="Crear_Pag">
-                <label for="Pag">Creación de sitio web</label><br>
-                <input type="checkbox" id="Conex" name="Tipo_Serv" value="Conectar_Empresas">
-                <label for="Conex">Conectar empresas</label><br>
-                <input type="checkbox" id="Host" name="Tipo_Serv" value="Hosting">
-                <label for="Host">Hosting para páginas</label><br>
-              </section>
+              <form class="Form_Contacto" id="Formulario" action="http://localhost:10000/servicios" method="POST">
+                <section id="services">
+                  <h1>Selecciona el servicio que necesitas</h1>
+                  <input type="checkbox" id="Pag" name="services" value="Crear_Pag">
+                  <label for="Pag">Creación de sitio web</label><br>
+                  <input type="checkbox" id="Conex" name="services" value="Conectar_Empresas">
+                  <label for="Conex">Conectar empresas</label><br>
+                  <input type="checkbox" id="Host" name="services" value="Hosting">
+                  <label for="Host">Hosting para páginas</label><br>
+                </section>
               
-              <label for="Nombre_Empresa">Ingresa el nombre de la empresa</label>
-              <input type="text" id="Nombre_Empresa" name="Nombre_Empresa" value="" required/>
+                <label for="companyName">Ingresa el nombre de la empresa</label>
+                <input type="text" id="Nombre_Empresa" name="companyName" required/>
               
-              <label for="Fecha">Ingresa la fecha en la cual podemos contactarte</label>
-              <input type="date" id="Fecha" name="Fecha" value="" required/>
+                <label for="contactDate">Ingresa la fecha en la cual podemos contactarte</label>
+                <input type="date" id="Fecha" name="contactDate" required/>
               
-              <label for="Email">Ingresa el email empresarial</label>
-              <input type="email" id="Email" name="Email" value="" required/>
+                <label for="email">Ingresa el email empresarial</label>
+                <input type="email" id="Email" name="email" required/>
               
-              <label for="Numero_Tel">Número telefónico de la empresa</label>
-              <input type="tel" id="Numero_Tel" name="Numero_Tel" value="" required/>
+                <label for="phoneNumber">Número telefónico de la empresa</label>
+                <input type="tel" id="Numero_Tel" name="phoneNumber" required/>
               
-              <button class="button" type="submit" id="Enviar">Enviar</button>
-              <input type="reset" name="Resetear formulario" class="reset">
-            </form>
+                <button class="button" type="submit" id="Enviar">Enviar</button>
+                <input type="reset" name="Resetear formulario" class="reset">
+              </form>
+              
           </center>
           </div>
-<script src="script.js"></script>
+
         <footer class="Pie" style="background-color: #333; border-radius: 15px; height: 55px;">
             <p style="color: white; text-align: center; font-family: Paragraphs;">Todos los derechos reservados a Dueñas y Yody ©</p>
         </footer>
@@ -91,6 +90,8 @@
         }
     });
 </script>
+
+<script src="Funciones.js"></script>
 
 </body>
 </html>
