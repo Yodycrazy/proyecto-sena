@@ -11,29 +11,24 @@ document.querySelector('#Formulario').addEventListener('submit', async (event) =
     const contactDate = document.querySelector('input[name="contactDate"]').value;
     const email = document.querySelector('input[name="email"]').value;
     const phoneNumber = document.querySelector('input[name="phoneNumber"]').value;
-
-    // Verifica si los valores están capturando correctamente
-    console.log('companyName:', companyName);
-    console.log('contactDate:', contactDate);
-    console.log('email:', email);
-    console.log('phoneNumber:', phoneNumber);
-    console.log('services:', services);
-
+    
+    /* const notificacion = document.getElementById('notificaciones'); */
+    
     const data = {
-        companyName, // Asegúrate de que este valor no sea undefined
-        contactDate: new Date(contactDate).toISOString(), // Formatea la fecha
+        companyName, 
+        contactDate: new Date(contactDate).toISOString(), 
         email,
         phoneNumber,
         services
     };
 
-    console.log('Datos a enviar:', data); // Muestra los datos que se enviarán
+    console.log('Datos a enviar:', data);
 
     try {
         const response = await fetch('http://localhost:10000/servicios', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json; charset=utf-8'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
         });
@@ -41,7 +36,9 @@ document.querySelector('#Formulario').addEventListener('submit', async (event) =
         if (response.ok) {
             const result = await response.json();
             console.log('Servicio creado:', result);
-        } else {
+            alert('Formulario enviado con exito, Hemos recibido su solicitud y en breve le atenderemos');
+/*          notificacion.classList.remove('hidden');
+ */        } else {
             const errorResponse = await response.text();
             console.error('Error al enviar los datos:', errorResponse);
         }

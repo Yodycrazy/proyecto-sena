@@ -39,6 +39,10 @@ font-family: Paragraphs;
 font-size: larger;
 }
 
+.hidden {
+  display: none;
+}
+
 h1 {
 font-family: Titles;
 font-size: 5em;
