@@ -39,10 +39,10 @@ font-family: Paragraphs;
 font-size: larger;
 }
 
-.hidden {
+/* .hidden {
   display: none;
 }
-
+ */
 h1 {
 font-family: Titles;
 font-size: 5em;
@@ -295,7 +295,7 @@ clear: both;
 display: table;
 }
 
-.Servi {
+.Services {
 float: left;
 width: 32%;
 padding: 5px;
@@ -333,7 +333,7 @@ label {
 input[type="text"],
 input[type="date"],
 input[type="email"],
-input[type="tel"] {
+input[type="text"] {
   width: 90%;
   padding: 10px;
   border: 1px solid #ddd;
