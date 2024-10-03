@@ -36,8 +36,10 @@ document.querySelector('#Formulario').addEventListener('submit', async (event) =
         if (response.ok) {
             const result = await response.json();
             console.log('Servicio creado:', result);
-            alert('Formulario enviado con exito, Hemos recibido su solicitud y en breve le atenderemos');
-            //refresh de la pagina o del formulario
+            alert('Formulario enviado con éxito. Hemos recibido su solicitud y en breve le atenderemos.');
+            // Refrescar la página
+            window.location.reload();
+        
 /*          notificacion.classList.remove('hidden');
  */        } else {
             const errorResponse = await response.text();
