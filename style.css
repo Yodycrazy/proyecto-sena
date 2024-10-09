@@ -39,10 +39,6 @@ font-family: Paragraphs;
 font-size: larger;
 }
 
-/* .hidden {
-  display: none;
-}
- */
 h1 {
 font-family: Titles;
 font-size: 5em;
@@ -295,7 +291,7 @@ clear: both;
 display: table;
 }
 
-.Services {
+.Servi {
 float: left;
 width: 32%;
 padding: 5px;
@@ -333,7 +329,7 @@ label {
 input[type="text"],
 input[type="date"],
 input[type="email"],
-input[type="text"] {
+input[type="tel"] {
   width: 90%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -519,25 +515,39 @@ article {
   text-shadow: 7px 4px 5px gray;
   font-weight: bolder;
   position: relative;
-  animation-name: Intro;
-  animation-duration: 0.35s;
+  animation-name: Introsub;
+  animation-duration: 2.5s;
+  
 }
 @keyframes Intro{
-  0%{font-size: 0em; top: 100px;}
-  10%{font-size: 1em; top: 80px}
-  20%{font-size: 1.5em; top: 80px}
-  30%{font-size: 2em; top: 80px}
-  40%{font-size: 2.5em; top: 75px}
-  50%{font-size: 3em; top: 75px}
-  70%{font-size: 3.5em; top: 70px}
-  80%{font-size: 4em; top: 70px}
-  90%{font-size: 4.5em; top: 65px}
-  100%{font-size: 5em;top: 60px;}
+  0% {
+    top: 100px;
+    opacity: 0;
+}
+
+100% {
+    top: 0px;
+    opacity: 1;
+}
+
+
+}
+
+@keyframes Introsub{
+  0% {
+    top: 100px;
+    opacity: 0;
+}
+
+100% {
+    top: 0px;
+    opacity: 1;
+}
 }
 #Titulo{
   position: relative;
   animation-name: Intro;
-  animation-duration: 0.35s;
+  animation-duration: 1s;
   
 }
 .servi1 {
@@ -763,7 +773,42 @@ body {
   body {
     font-size: 12px;
   }
+  .Socio{
+    filter: grayscale(100%);
+  
+    margin: 15px;
+  }
+  .Socio:hover{
+  filter: none;
+  transition-duration: 0.8s;
+  transform: scale(1.25);
+  }
+  .Socios{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+   
+  }
+  #Rapidez{
+    width: 50%;
+    height: auto;
+  }
+  #satis{
+    width: 50%;
+    height: auto;
+  }
+  #Rendir{
+    width: 50%;
+    height: auto;
 
+  }
+  #carac{
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -790,6 +835,90 @@ body {
     display: none;
   }
 
+  .Socio{
+    filter: grayscale(100%);
+    margin: 15px;
+  }
+  .Socio:hover{
+  filter: none;
+  transition-duration: 0.8s;
+  transform: scale(1.25);
+  }
+  .Socios{
+    margin: 30px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #Rapidez{
+    width: 50%;
+    height: auto;
+  }
+  #satis{
+    width: 50%;
+    height: auto;
+  }
+  #Rendir{
+    width: 50%;
+    height: auto;
 
+  }
+  #carac{
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#Socio1{
+  width: auto;
+  height: auto;
 }
 
+
+.Socios{
+  justify-content: space-around;
+  display: inline-flex;
+  margin: 30px;
+  max-width: 100%;
+ 
+}
+
+.Socio{
+  filter: grayscale(100%);
+  margin: 15px;
+}
+.Socio:hover{
+filter: none;
+transition-duration: 0.8s;
+transform: scale(1.25);
+}
+
+
+
+#SoporteInfo{
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  text-align: center;
+}
+
+#Rapidez{
+  width: 110%;
+  height: auto;
+  align-items: start;
+}
+#Rendir{
+  width: 110%;
+  height: auto;
+
+
+}
+#carac{
+  justify-content: space-around;
+  display: inline-flex;
+  margin: 30px;
+  max-width: 100%;
+}
+#satis{
+  width: 75%;
+  height: auto;
+ align-items: end;
+}
