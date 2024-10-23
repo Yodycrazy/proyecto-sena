@@ -22,7 +22,7 @@ document.querySelector('#Formulario').addEventListener('submit', async (event) =
     console.log('Datos a enviar:', data);
 
     try {
-        const response = await fetch('http://localhost:10000/servicios', {
+        const response = await fetch('http://179.32.229.104:10000/servicios', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json; charset=utf-8'
