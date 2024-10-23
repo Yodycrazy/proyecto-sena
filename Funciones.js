@@ -22,7 +22,7 @@ document.querySelector('#Formulario').addEventListener('submit', async (event) =
     console.log('Datos a enviar:', data);
 
     try {
-        const response = await fetch('http://179.32.229.104:10000/servicios', {
+        const response = await fetch('https://ripe2-apim.azure-api.net/servicios', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json; charset=utf-8'
