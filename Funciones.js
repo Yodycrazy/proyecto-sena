@@ -36,7 +36,7 @@ document.querySelector('#Formulario').addEventListener('submit', async (event) =
                 console.log('Servicio creado:', result);
                  // Mostrar alerta de éxito
                 alert('El servicio ha sido agendado. Nos comunicaremos contigo para la asesoría gratuita.');
-                // Recargar la página
+               
                 window.location.reload();
             } catch (jsonError) {
                 console.error('Error al analizar la respuesta JSON:', jsonError);
