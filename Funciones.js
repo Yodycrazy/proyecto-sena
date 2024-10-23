@@ -24,6 +24,7 @@ document.querySelector('#Formulario').addEventListener('submit', async (event) =
     try {
         const response = await fetch('https://backend-sena-afh4d6gud7fnfpem.eastus2-01.azurewebsites.net/servicios', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json; charset=utf-8'
             },
