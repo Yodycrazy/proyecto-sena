@@ -56,20 +56,21 @@
                 </section>
               
                 <label for="companyName">Ingresa el nombre de la empresa</label>
-                <input type="text" id="companyName" name="companyName" required/>
+                <input type="text" id="companyName" name="companyName" autocomplete="organization" required/>
               
                 <label for="contactDate">Ingresa la fecha en la cual podemos contactarte</label>
-                <input type="date" id="contactDate" name="contactDate" required/>
+                <input type="date" id="contactDate" name="contactDate" autocomplete="bday" required/>
               
                 <label for="email">Ingresa el email empresarial</label>
-                <input type="email" id="email" name="email" required/>
+                <input type="email" id="email" name="email" autocomplete="email" required/>
               
                 <label for="phoneNumber">Número telefónico de la empresa</label>
-                <input type="text" id="phoneNumber" name="phoneNumber" required/>
+                <input type="tel" id="phoneNumber" name="phoneNumber" autocomplete="tel" required/>
               
                 <button class="button" type="submit">Enviar</button>
                 <input type="reset" name="Resetear formulario" class="reset">
-            </form>
+              </form>
+              
           <!--   <div class="hidden" id="notificaciones">
             <p>Formulario enviado con exito, Hemos recibido su solicitud y en breve le atenderemos</p>
             </div> -->
