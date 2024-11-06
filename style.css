@@ -1,11 +1,11 @@
 @font-face {
   font-family: Titles;
-  src: url(/Edu_VIC_WA_NT_Beginner/EduVICWANTBeginner-VariableFont_wght.ttf);
+  src: url(/Poppins/Poppins-Regular.ttf);
 }
 
 @font-face {
   font-family: Subtitle;
-  src: url(/Edu_VIC_WA_NT_Beginner/static/EduVICWANTBeginner-Medium.ttf);
+  src: url(/Poppins/Poppins-Regular.ttf);
 }
 @font-face {
 font-family: Paragraphs;

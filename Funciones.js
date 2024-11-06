@@ -24,29 +24,36 @@ document.querySelector('#Formulario').addEventListener('submit', async (event) =
     try {
         const response = await fetch('http://142.44.247.98:3006/servicios', {
             method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json; charset=utf-8'
             },
             body: JSON.stringify(data)
         });
-    
+
         if (response.ok) {
             try {
                 const result = await response.json(); // Analizar la respuesta solo si es JSON
                 console.log('Servicio creado:', result);
-                 // Mostrar alerta de éxito
                 alert('El servicio ha sido agendado. Nos comunicaremos contigo para la asesoría gratuita.');
-                // Recargar la página
                 window.location.reload();
             } catch (jsonError) {
                 console.error('Error al analizar la respuesta JSON:', jsonError);
             }
+        } else if (response.status === 401) {
+            console.error('Error de autenticación. Verifica las credenciales.');
+        } else if (response.status === 403) {
+            console.error('No tienes permisos para realizar esta operación.');
+        } else if (response.status === 500) {
+            console.error('Error en el servidor. Intenta de nuevo más tarde.');
         } else {
             const errorResponse = await response.text(); // Leer el texto de la respuesta
             console.error('Error al enviar los datos:', errorResponse);
         }
     } catch (error) {
         console.error('Error en la solicitud:', error);
+        if (error.message.includes('CORS')) {
+            alert('Parece que hay un problema con la política CORS. Por favor, contacta al administrador.');
+        }
     }
-    
 });
